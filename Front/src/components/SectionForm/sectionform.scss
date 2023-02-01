@@ -1,0 +1,41 @@
+@use 'src/styles/vars';
+
+.sectionForm {
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    padding:  vars.$gutter*2 ;
+    font-size: 1.2rem;
+    
+    &__submit {
+      padding: 0.8em;
+      background-color: #282352!important;
+      border-radius: 1em;
+      color: wheat;
+      margin: 1em;
+
+    }
+    &__field {
+      border-radius: 5px;
+      border: 1px solid lightgray;
+      padding:  vars.$gutter*0.2 ;
+
+
+    }
+
+  }
+  h1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2rem;
+    background-color: #282352;
+    color: wheat;
+    border-radius: 1em;
+    padding: 1em;
+    margin-top: 2em;
+  }
+  }

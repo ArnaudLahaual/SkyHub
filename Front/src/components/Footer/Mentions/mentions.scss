@@ -1,0 +1,27 @@
+.mentions {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+
+  &__title {
+    text-align: center;
+    padding: 1em;
+    background-color: #282352;
+    color: wheat;
+    font-weight: bold;
+
+    &__subtitles {
+      text-align: justify;
+      text-align: center;
+      padding: 1em;
+      text-decoration: underline;
+
+      &__text {
+        text-align: justify;
+        padding: 1em;
+      }
+    }
+  }
+
+
+}

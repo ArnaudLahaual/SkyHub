@@ -1,0 +1,45 @@
+@use 'src/styles/vars';
+
+.session__comments{
+ 
+ width: 100%;
+ border-bottom: solid vars.$mainColor 0.1em;
+ padding: 1em;
+ border-color: vars.$mainColor;
+
+
+ &__data{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+  &__user{
+    
+    color: vars.$color;
+    font-weight: 500;
+  }
+&__date{
+  display: flex;
+  color: #922D76 ;
+  font-weight: 300;
+  
+}
+&__content{
+  display: flex;
+  padding: 1em;
+
+}
+
+&__delete{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 25px;
+ 
+}
+
+
+}
+
+
+ 

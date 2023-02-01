@@ -1,0 +1,32 @@
+@use 'src/styles/vars';
+
+.navbar-mobile{
+
+    &__list {
+        padding: 0 vars.$gutter*0.5;
+        background-color: white;
+        
+        li {
+          border-bottom: solid 1px rgba(191, 191, 191, 0.736);
+          padding: vars.$gutter*0.45;
+        }
+
+        &__link, &__logout {
+          font-weight: 400;
+          font-size: 1.2em;
+          letter-spacing: 0.07rem;
+        }
+
+        &__logout {
+          display: flex;
+        }
+
+        &__logout:before {
+          content: url('../../../assets/img/logout.svg');
+          width: 22px;
+          align-self: center;
+          padding-top: 2px;
+          margin-right: vars.$gutter*0.5;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+html {
+    overflow-y: scroll;
+}
+.main-wrapper{
+    padding: 3% 10% 3% 10%;
+}
+
+.header-logo__title {
+    color: #e9eff3;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0.8em 0 0.3em;
+    text-transform: uppercase;
+}
+
+.h-md-300 {
+    height: 300px;
+}
+
+.movie__poster {
+    background-position: center;
+    background-size: cover;
+}
+
+.movie__poster img {
+    width: 100%;
+    /* height: 300px;
+    object-fit: cover;
+    object-position: top; */
+}
+
+.movie__favorite {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bouton {
+    display: flex;
+    gap: 5px;
+
+}
+
+.nav-item{
+    color: #aa1277;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 0 0.8em 0 0.3em;
+    text-transform: uppercase;
+}
+
+
+
+.login-wrapper{
+    padding: 3% 35% 3% 35%;
+}
+
+/* CRUD */
+
+.crud-textarea {
+    height: 7em;
+}
+
+.body {
+    height: 100%;
+  }
+  
+  .body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+    background-image: url();
+  }
+  
+  .form-signin {
+    max-width: 330px;
+    padding: 15px;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+
+.bg-img {
+    background-image:url(https://st2.depositphotos.com/4164031/7029/i/600/depositphotos_70298385-stock-photo-deep-space.jpg);
+}
+
+.nav-link {
+    color: rgb(235, 235, 235);
+}
+
+.nav-link:hover {
+    color: #d637a9;
+}
+
+
+.example-wrapper { 
+    margin: 1em auto;
+    max-width: 800px; 
+    width: 95%; 
+    font: 18px/1.5;
+    font-family: 'Abang', sans-serif;
+    text-align: center;   
+ }
+
+
+
+.example-wrapper code { 
+    background: #F5F5F5; 
+    padding: 2px 6px;
+ }

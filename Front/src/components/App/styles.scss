@@ -1,0 +1,16 @@
+.app {
+  width: 100%;
+}
+
+main{
+  padding-top: 60px;
+  height: 100%;
+  
+  @media(min-width: 768px){
+    min-height: 75vh;
+    max-width: 65%;
+    margin: 0 auto;
+    }
+}
+   
+

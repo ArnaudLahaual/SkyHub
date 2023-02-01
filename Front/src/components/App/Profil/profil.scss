@@ -1,0 +1,138 @@
+@use 'src/styles/vars';
+
+.profil {
+  //display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5em;
+  width: 100%;
+  
+  &__infoTitle{
+    font-weight: 500;
+    font-size: large;
+    padding-bottom: 1em;
+   
+  }
+  &__username{
+    font-size: x-large;
+   padding-bottom: 1em;
+  }
+
+  &__localisation{
+    padding-bottom: 1em;
+  }
+  
+  &__description{
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
+  &__sessions-lists {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+    .profil__sessions-list {
+      border: solid 1px lightgray;
+      border-radius: 10px;
+      margin-bottom: vars.$gutter;
+      margin: vars.$gutter*0.2;
+
+      @media (min-width: 768px) {
+        width: 40%;
+      }
+
+      &__add {
+        font-weight: 500;
+        color: rgb(80, 80, 248);
+
+        &:hover {
+          font-weight: 600;
+          color: blue;
+        }
+      }
+
+      &__title {
+        font-size: 1.3rem;
+        color: white;
+        background-color: vars.$mainColor;
+        border-radius: 9px 9px 0 0;
+      }
+
+      &__item {
+        border: solid 1px lightgray;
+        border-radius: 5px;
+        margin: vars.$gutter*0.2;
+        padding: vars.$gutter*0.2 vars.$gutter*0.4;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__title {
+          font-weight: 400;
+        }
+
+        &__city {
+          font-weight: 300;
+          color: rgb(69, 67, 67);
+          font-size: 0.9rem;
+        }
+
+        &__link {
+          color: rgb(41, 41, 255);
+          align-self: flex-end;
+          
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .profil__avatar {
+      display: block;
+      justify-content: center;
+      width: 80px;
+      
+
+    }
+
+  .profil__logout {
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: vars.$mainColor;
+    color: white;
+    padding: vars.$gutter*0.3;
+
+    &:hover {
+      box-shadow: 0px 0px 3px vars.$mainColor;
+      font-weight: 500;
+    }
+  }
+
+  .profil__edit-link {
+    color: rgb(58, 58, 245);
+    margin: vars.$gutter;
+
+    &:hover {
+      font-weight: 500;
+    }
+  }
+  }
+}
+
+    
+

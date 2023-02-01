@@ -1,0 +1,12 @@
+.error{ 
+  font-family: 'Abang', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  &__text{
+    text-align: center;
+    font-size: 10em;
+  }
+}

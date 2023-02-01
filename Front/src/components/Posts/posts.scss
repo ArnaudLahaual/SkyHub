@@ -1,0 +1,48 @@
+@use 'src/styles/vars';
+
+.posts {
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__banner-container {
+    max-height: 200px;
+    overflow:hidden;
+    position: relative;
+    margin-bottom: vars.$gutter;
+    
+    @media (min-width: 768px) {
+      margin: vars.$gutter;
+      border-radius: 10px;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.6em;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
+  
+    // background-color: #282352;
+    // color: wheat;
+    // border-radius: 1em;
+    // padding: 1em;
+  }
+
+}
+
+
+.postcard:hover{
+  -ms-transform: scale(1); /* IE 9 */
+-webkit-transform: scale(1); /* Safari 3-8 */
+transform: scale(1);
+}
+

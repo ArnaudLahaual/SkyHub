@@ -1,0 +1,72 @@
+
+@use 'src/styles/vars';
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  &__profil {
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &__nickname {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+}
+
+.header__nav{
+background-color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 60px;
+
+
+padding: vars.$gutter*0.2 vars.$gutter*0.4;
+
+  .header__logo {
+    max-width: 8rem;
+  }
+
+  .burger-icon {
+    width: 3rem;
+    display: flex;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .helmet {
+    display:none;
+    max-width: 3.2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+}
+
+.header__profil {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+
+}

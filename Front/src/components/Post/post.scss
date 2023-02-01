@@ -1,0 +1,88 @@
+@use 'src/styles/vars';
+
+.post {
+  margin-bottom: vars.$gutter*3;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .divider {
+    border-bottom: solid 1px rgb(202, 201, 201);
+    margin: vars.$gutter*0.6 0 vars.$gutter*0.1;
+    width: 50%;
+  }
+
+  &__title {
+    margin-top: vars.$gutter;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  &__author {
+    text-align: center;
+    font-weight: 300;
+    color: gray;
+    margin: vars.$gutter*0.5;
+  }
+
+  &__picture-container {
+    max-height: 500px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  &__picture {
+    width: 100%;
+  }
+
+  &__content {
+    padding: vars.$gutter*1.2 vars.$gutter*0.8;
+    font-weight: 300;
+    font-size: 1.1em;
+  }
+
+  &__date {
+    display: block;
+    text-align: right;
+    font-weight: 300;
+    color: gray;
+    padding: vars.$gutter*0.2 vars.$gutter;
+  }
+}
+
+.posts-overview {
+  border: solid 1px lightgray;
+  //width: 40%;
+  border-radius: 10px;
+  margin: vars.$gutter*0.5;
+  
+  &__link {
+    display: block;
+    text-align: center;
+    margin: vars.$gutter;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: rgb(82, 82, 241);
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+
+  &__title {
+    padding: vars.$gutter*0.8;
+    background-color: #282352;
+    border-radius: 9px 9px 0 0;
+    color: white;
+
+    h2 {
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+  }
+}

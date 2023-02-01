@@ -1,0 +1,55 @@
+{% extends 'back/nav.html.twig' %}
+
+{% block title %}Liste des sessions{% endblock %}
+
+{% block body %}
+<div class="main-wrapper">
+    <h1>Liste des sessions</h1>
+
+    {# Ici fragment à inclure #}
+    {# {% include "_flash_message.html.twig" %} #}
+
+    {# admin seulement #}
+    {# {% if is_granted('ROLE_ADMIN') %} #}
+    <a href="{{ path('app_back_session_new') }}" class="btn btn-primary">Nouvelle session</a> 
+    {# {% endif %} #}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Photo</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Ville</th>
+                <th>Région</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for session in sessions %}
+            <tr>
+                <td>{{ session.id }}</td>
+                <td><img src="{{ session.picture }}"  height="80" width="125"></td>
+                <td class="text-truncate" style="max-width:200px;">{{ session.title }}</td>
+                <td class="text-truncate" style="max-width:200px;">{{ session.description }}</td>
+                <td>{{ session.date ? session.date|date('d-m-Y') : '' }}</td>
+                <td>{{ session.city }}</td>
+                <td>{{ session.region }}</td>
+                <td>
+                    <a href="{{ path('app_back_session_show', {'id': session.id}) }}" class="btn btn-sm btn-primary">Voir</a>
+                    {# admin seulement #}
+                    {# {% if is_granted('ROLE_ADMIN') %} #}
+                    <a href="{{ path('app_back_session_edit', {'id': session.id}) }}" class="btn btn-sm btn-info">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">Aucune session trouvée.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

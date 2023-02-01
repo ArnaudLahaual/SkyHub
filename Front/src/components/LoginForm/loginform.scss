@@ -1,0 +1,78 @@
+.loginform {
+
+  flex-direction: column;
+  padding: 7em;
+  display: flex;
+  
+  // responsive section
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+ }
+  &__form {
+
+    align-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+
+
+
+
+    &__mail__field {
+      padding: 0.3em;
+    }
+
+    &__password__field {
+      padding: 0.3em;
+      
+    }
+
+    &__connect {
+      padding: 0.3em;
+      background-color: #282352!important;
+      color: wheat;
+    }
+
+    &__create {
+      padding: 0.3em;
+      background-color: #282352!important;
+      color: wheat;
+    }
+  }
+}
+
+.create__account {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: space-around;
+  padding: 2em;
+  
+  &__button {
+    padding: 0.3em;
+    background-color: #282352!important;
+    color: wheat;
+
+  }
+}
+
+.create__image {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.cosmo__img {
+  @media (min-width: 768px) {
+    width: 50%;
+    height: auto;
+  }
+}

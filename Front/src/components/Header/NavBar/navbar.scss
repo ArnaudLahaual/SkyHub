@@ -1,0 +1,61 @@
+@use 'src/styles/vars';
+
+.navbar {
+  align-self: center;
+
+  &__menu {
+    display: flex;
+    padding:0.5em;
+    display: flex;
+    padding: 0.5em;
+    flex-direction: row;
+    align-items: center;
+    display: none;
+    font-size: large;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__link {
+    margin: vars.$gutter*0.8;
+    padding: 0.3*vars.$gutter;
+
+    &:hover {
+      color: vars.$color;
+    }
+  }
+
+  .nav__active {
+    font-weight: 500;
+    color: vars.$secondColor;
+    text-decoration: underline;
+  }
+
+  // classe pour l'animation du hover des liens de la navbar
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: vars.$color;
+    transform-origin: bottom right;
+    transition: transform 0.50s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: #ad368c;
+  }
+}

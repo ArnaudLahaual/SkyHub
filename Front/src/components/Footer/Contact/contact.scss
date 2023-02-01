@@ -1,0 +1,59 @@
+@use 'src/styles/vars';
+.contact {
+
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+
+  @media (min-width: 768px) {
+    display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  font-size: 25px;
+  }
+
+  &__list {
+    margin: 1em;
+    text-align: center;
+
+    &__title {
+      background-color: #282352;
+      color: white;
+      border-radius: 1em;
+    }
+    &__title:hover {
+      background-color: #282352;
+      color: wheat;
+      border-radius: 1em;
+    }
+
+    &__number {
+      display: flex;
+      flex-direction: column;
+      margin: 1em;
+
+      &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+  }
+}
+.cosmoPhone {
+  
+  width: 300px;
+
+  @media (min-width: 768px) {
+    
+    width: 400px;
+  }
+}

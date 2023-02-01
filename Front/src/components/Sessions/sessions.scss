@@ -1,0 +1,87 @@
+@use 'src/styles/vars';
+
+.SessionList{
+width: 100%;
+padding: vars.$gutter*0.5;
+
+  &__list {
+     @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    //padding: vars.$gutter*0.8;
+    border-radius: 9px 9px 0 0;
+    color: black;
+
+    h1 {
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.5rem;
+      //background-color: #282352;
+      //color: wheat;
+      border-radius: 1em;
+      //padding: 1em;
+    }
+
+  }
+
+
+  &__section__add {
+    border-radius: 1em;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+    padding: vars.$gutter*0.4;
+    border: 2px solid black;
+    border-radius: 1em;
+    width: 10em;
+    background-color: #282352!important;
+
+    &:hover {
+      box-shadow: 1px 1px 3px vars.$mainColor;
+    }
+    
+  }
+
+
+  .dropdown__menu{
+    display: flex;
+    //width: 30%;
+    //flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+
+
+}
+
+.search__dropdown__date {
+  margin: 15px;
+  padding: 2px;
+}
+.search__dropdown__region {
+  margin: 15px;
+  padding: 2px;
+}
+
+
+  
+
+

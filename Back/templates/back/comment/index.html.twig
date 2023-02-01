@@ -1,0 +1,47 @@
+{% extends 'back/nav.html.twig' %}
+
+{% block title %}Liste des commentaires{% endblock %}
+
+{% block body %}
+<div class="main-wrapper">
+    <h1>Liste des commentaires</h1>
+
+    <a href="{{ path('app_back_comment_new') }}" class="btn btn-primary">Nouveau commentaire</a>
+
+    <table class="table"
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Contenu</th>
+                <th>Publié le</th>
+                <th>Rédiger par</th>
+                <th>Session concernée</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for comment in comments %}
+            <tr>
+                <td>{{ comment.id }}</td>
+                <td class="text-truncate" style="max-width:200px;">{{ comment.content }}</td>
+                <td>{{ comment.publishedAt ? comment.publishedAt|date('d-m-Y') : '' }}</td>
+                <td>{{ comment.redact }}</td>
+                <td>{{ comment.has }}</td>
+                <td>
+                    <a href="{{ path('app_back_comment_show', {'id': comment.id}) }}" class="btn btn-sm btn-primary">Voir</a>
+                    
+                    <a href="{{ path('app_back_comment_edit', {'id': comment.id}) }}" class="btn btn-sm btn-info">Modifier</a>
+                    
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Aucun commentaire trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+</div>
+{% endblock %}

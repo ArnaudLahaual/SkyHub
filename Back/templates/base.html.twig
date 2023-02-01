@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+        
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<link href="shortcut icon" href="{{ asset('favicon.png')}}" type="image/x-icon">
+        <link href="https://fonts.cdnfonts.com/css/abang" rel="stylesheet">
+                
+		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+		<!-- Bootstrap CSS -->
+		<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> <!-- Bootstrap icons -->
+		<link
+		rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+		<!-- Our custom CSS -->
+		<link rel="stylesheet" href="{{ asset('css/skyhub.css')}}"> {% block stylesheet %}{% endblock %}
+		<!-- favicon -->
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
+	<body>
+		
+
+    <nav class="navbar navbar-expand-lg navbar bg-img">
+    
+    
+        <div class="container-fluid">
+            <a href="{{ path('app_back_home') }}" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none header-logo">
+                <img  src="{{ asset('favicon.png')}}" width="60" height="60" alt="Logo Skyhub">
+                {# <span class="header-logo__title">SkyHub</span> #}
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    {# <li class="nav-item">
+                        <a class="nav-link {% block nav_main_home %}{% endblock %}" href="{{ path('main_home') }}">Accueil</a>
+                    </li> #}
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_session_list %}{% endblock %}"href="{{ path('app_back_session_index') }}"><i class="bi bi-calendar-day"></i> Sessions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_post_list %}{% endblock %}"href="{{ path('app_back_post_index') }}"><i class="bi bi-stars"></i> Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_comment_list %}{% endblock %}" href="{{ path('app_back_comment_index') }}"><i class="bi bi-rocket-takeoff"></i> Commentaires </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_favorite_list %}{% endblock %}" href="{{ path('app_back_user_index') }}"><i class="bi bi-robot"></i> Utilisateurs </a>
+
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            <span>{{ app.user.nickname }}</span>
+                            <i class="bi bi-person-square"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item disabled">
+                                {# {% if is_granted('ROLE_ADMIN') %}
+                                Administrateur
+                                {% elseif is_granted('ROLE_MANAGER') %}
+                                Manager
+                                {% elseif is_granted('ROLE_USER') %}
+                                Membre
+                                {% endif %} #}
+                            </a></li>
+                            <li><a class="dropdown-item" href="{{ path('app_back_user_show', {'id': app.user.id}) }}">Profil</a></li>
+                            <li><a class="dropdown-item" href="#">Accès au site</a></li>
+                        </ul>
+                    </li>
+                    {# {Je commente ceci juste parce que je n'ai pas de place :D #}
+                    <li class="nav-item">
+                        <a class="nav-link btn-sm btn-danger me-2 text-white" href="{{ path('app_logout') }}">Déconnexion</a>
+                    </li>
+                     {% else %} 
+
+                    
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link">
+                            <span>Visiteur</span>
+                            <i class="bi bi-person-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-sm btn-primary me-2 text-white" href="{{ path('app_login') }}">Connexion</a>
+                    </li>
+                    {% endif %} 
+                </ul>
+
+
+                
+            </div>
+        </div>
+    </nav>{# if maintenance_message %}<p>{{ maintenance_message }}</p>{% endif #}
+
+</body>
+    {# Sous-nav si nécessaire #}
+    {% block subnav %}{% endblock %}
+    
+    {# CONTENT SOIT là ! #}
+    {# {% block parent_body %}
+        {% block body %}{% endblock %}
+    {% endblock %} #}
+{% block body %}{% endblock %}
+    <!-- footer -->
+    <footer class="container-fluid py-4 border-top text-center overflow-auto">
+        <span class="text-muted">SkyHub made with &star;
+        </span>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of 
+        the two! -->
+    {% block javascript %}{% endblock %}
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+
+
+
+
+
+</html>

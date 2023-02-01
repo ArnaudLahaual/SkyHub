@@ -1,0 +1,42 @@
+@use 'src/styles/vars';
+
+.registration {
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    //padding:  vars.$gutter*2;
+    width: 60%;
+    margin: vars.$gutter*2 auto;
+    
+    &__submit {
+      padding: 0.3em;
+      background-color: #282352!important;
+      color: wheat;
+    }
+
+    &__label {
+      text-align: left;
+
+      span {
+        color: gray;
+        font-size: 0.8rem;
+      }
+    }
+
+    &__textarea {
+      border-radius: 5px;
+      border: 1px solid lightgray;
+      width: 100%;
+    }
+    &__field {
+      border-radius: 5px;
+      border: 1px solid lightgray;
+      padding:  vars.$gutter*0.2 ;
+      margin-bottom: vars.$gutter*0.4;
+    }
+
+  }
+
+  }

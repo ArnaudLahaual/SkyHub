@@ -1,0 +1,72 @@
+@use 'src/styles/vars';
+
+.team {
+
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin-top: 2em;
+//   border-radius: 1em;
+//   background-color: white;
+
+
+  // @media (min-width: 768px) {
+  //   align-items: center;
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  // }
+ 
+&__picture{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__image{
+    display: flex;
+    width: 800px;
+    height: 600px;
+    padding: 0;
+
+}
+
+}
+
+ 
+//   &__profil {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     @media (min-width: 768px) {
+//       padding: 2em;
+//     }
+
+//     &__avatar {
+//       justify-content: center;
+//       width: 150px;
+
+//     }
+//   }
+// }
+
+// .team__front {
+//   @media (min-width: 768px) {
+//     display: flex;
+//   }
+// }
+
+// .team__back {
+
+//   @media (min-width: 768px) {
+//     display: flex;
+//   }
+// }
+
+// h1 {
+//   text-align: center;
+//   font-size: 30px;
+// }
+
+}

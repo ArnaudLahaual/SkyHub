@@ -1,0 +1,49 @@
+{% extends 'back/nav.html.twig' %}
+
+{% block title %}Liste des posts{% endblock %}
+
+{% block body %}
+<div class="main-wrapper">
+    <h1>Liste des posts</h1>
+
+    <a href="{{ path('app_back_post_new') }}" class="btn btn-primary">Nouveau post</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Titre</th>
+                <th>Contenu</th>
+                <th>Publié le</th>
+                <th>Type</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.id }}</td>
+                <td><img src="{{ post.picture }}" height="80" width="125"></td>
+                <td class="text-truncate" style="max-width:200px;">{{ post.title }}</td>
+                <td class="text-truncate" style="max-width:200px;">{{ post.content }}</td>
+                <td>{{ post.publishedAt ? post.publishedAt|date('d-m-Y') : '' }}</td>
+                <td>{{ post.type }}</td>
+                <td>
+                    <a href="{{ path('app_back_post_show', {'id': post.id}) }}" class="btn btn-sm btn-primary">Voir</a>
+                    
+                    <a href="{{ path('app_back_post_edit', {'id': post.id}) }}" class="btn btn-sm btn-info">Modifier</a>
+                    
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Aucun post trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+</div>
+{% endblock %}

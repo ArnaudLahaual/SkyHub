@@ -1,0 +1,232 @@
+@use 'src/styles/vars';
+
+.session {
+  margin-bottom: vars.$gutter*3;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  &__divider {
+    border-bottom: solid 1px rgb(202, 201, 201);
+    margin: vars.$gutter*0.6 0 vars.$gutter*0.1;
+    width: 50%;
+  }
+
+  &__title {
+    margin-top: vars.$gutter;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  &__author {
+    text-align: center;
+    font-weight: 400;
+    color: vars.$color;
+    margin: vars.$gutter*0.5;
+  }
+  &__picture-container {
+    max-height: 500px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    
+  }
+
+  &__picture {
+    width: 100%;
+    
+  } 
+
+  
+
+  &__content {
+    padding: vars.$gutter*1.2 vars.$gutter*0.8;
+    font-weight: 300;
+    font-size: 1.1em;
+    padding-bottom: 3em;
+    padding-top: 4em;
+  }
+
+&__CityRegion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1em;
+  
+}
+
+&__date {
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.75em;
+  color: vars.$color;
+  @media (max-width: 768px){
+    font-weight: 400;
+    font-size: 1.25em;
+  }
+}
+
+  &__postdate {
+    display: block;
+    text-align: right;
+    font-weight: 300;
+    color: gray;
+    padding: vars.$gutter*0.2 vars.$gutter;
+    
+  }
+
+  &__participant{
+    text-align: center;
+    padding-top: 0.10em;
+    font-size: 1.5em;
+    font-weight: 400;
+    padding-bottom: 1em;
+    @media (max-width: 768px){
+      font-size: 1.25em;
+    }
+
+    
+  }
+
+  &__logAlert{
+    padding: 2em 0em;
+    font-style: italic;
+    
+  }
+
+  &__logLink{
+    color: vars.$secondColor;
+    
+    &:hover{
+     color: vars.$color
+    }
+  }
+
+&__participation-buttonDiv{
+  display: flex;
+  justify-content: center;
+
+    
+    }
+
+  &__participation-button{
+    
+    font-size: 1.3rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: vars.$gutter*0.2 vars.$gutter;
+    background-color: vars.$color;
+    color: white;
+    
+    &:hover {
+      background: #922D76;
+      color: white;
+      transition: backround-color 1s;
+      font-weight: 500;
+
+     
+      
+    }
+   
+  }
+
+  &__commentZone{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 4em;
+
+    &__divider{
+      border-bottom: solid 1px rgb(202, 201, 201);
+      margin: vars.$gutter*0.6 0 vars.$gutter*0.1;
+      width: 75%;
+    }
+    
+    &__text{
+      font-weight: 400;
+      font-size: 1.5em;
+      color: vars.$secondColor;
+    }
+  }
+
+  &__participation-modal {
+    background-color: rgba(2, 57, 158, 0.233);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left:0;
+    bottom:0;
+    z-index:100;
+
+    &__container {
+      
+      background-color: white;
+      padding: vars.$gutter;
+      width: 70%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      border: solid 1px rgb(199, 199, 199);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      
+      p {
+        padding-bottom: 1.5em;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: space-around;
+      
+    }
+
+    &__button {
+      font-size: 1.3rem;
+      border: 1px solid;
+      border-radius: 10px;
+      padding: vars.$gutter*0.2 vars.$gutter;
+      background-color: vars.$color;
+      color: white;
+
+      &:hover {
+        background: #922D76;
+        color: white;
+        transition: backround-color 1s;
+        font-weight: 500;
+      }
+    }
+
+    
+  }
+  
+}
+.session__interaction {
+  display: flex;
+  justify-content: space-evenly;
+
+  &__delete__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__edit__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
